@@ -1,0 +1,881 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Aquaflask</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/5479/5479020.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Nunito", sans-serif;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    section {
+      padding: 7rem 0;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 65rem;
+      margin: 0 auto;
+    }
+
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .split > * {
+      flex-basis: 30%;
+      min-width: 15rem;
+    }
+
+    .spacing > * + * {
+      margin-top: var(--spacer, 2rem);
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--clr-text, #fff);
+      font-weight: 700;
+      background-color: #47b799;
+      text-transform: uppercase;
+      font-size: 1.125rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.25rem;
+      transition: transform 250ms ease-in-out, opacity 250ms linear;
+    }
+
+    .btn:hover,
+    .btn:focus {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    .primary-title {
+      font-size: 4rem;
+      font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3.5rem;
+      font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+      line-height: 1;
+      color: #FFFFFF;
+      margin-bottom: 5rem;
+      text-shadow: #111;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 15rem 0;
+      color: white;
+      background: #222;
+    }
+
+    @supports (background-blend-mode: multiply) {
+      .hero {
+        background: url(https://cf.shopee.ph/file/7514907924a136783131efa265c77348),
+          radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+
+    .featured {
+      background-image: linear-gradient(
+        to left bottom,
+        #2696fd,
+        #00bcff,
+        #00daf2,
+        #00f1b9,
+        #91ff79
+      );
+    }
+
+    .featured__item {
+      display: block;
+      position: relative;
+      text-decoration: none;
+      color: #333;
+      text-align: center;
+      line-height: 1.2;
+      transform: scale(0.85);
+      transition: transform 250ms ease-in-out;
+    }
+
+    .featured__item:hover,
+    .featured__item:focus {
+      transform: scale(1);
+    }
+
+    .featured__item::after {
+      content: "";
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      padding: 75% 75% 0 0;
+      border-radius: 50%;
+      background: #fffefe;
+      z-index: -1;
+    }
+
+    .featured__details {
+      opacity: 0;
+      transition: opacity 250ms linear;
+    }
+
+    .featured__item:hover .featured__details,
+    .featured__item:focus .featured__details {
+      opacity: 1;
+      text-shadow: 0 0 2rem white;
+    }
+
+    .featured__details span {
+      display: block;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+
+    #product {
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      background-image: linear-gradient(
+        to right top,
+        #2696fd,
+        #00bcff,
+        #00daf2,
+        #00f1b9,
+        #91ff79
+      );
+    }
+
+    #others {
+      text-align: center;
+      height: auto;
+      background-image: radial-gradient(
+        circle,
+        #2696fd,
+        #00bcff,
+        #00daf2,
+        #00f1b9,
+        #91ff79
+      );
+    }
+
+    #product h3 {
+      margin-top: 0;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 4.5rem;
+      font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+      line-height: 1.5;
+      color: #FFFFFF;
+      text-shadow: #111;
+    }
+
+    .container-product {
+      display: flex;
+      height: 20rem;
+      gap: 1rem;
+    }
+
+    .container-product > div {
+      flex: 1;
+      border-radius: 1rem;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      transition: all 0.8s cubic-bezier(0.25, 0.4, 0.45, 1.4);
+      position: relative;
+    }
+
+    .container-product > div:hover {
+      flex: 5;
+    }
+
+    .more_products_info {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+      transition: all 0.5s;
+    }
+
+    .more_products_info span {
+      display: block;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .container-product > div:hover .more_products_info {
+      display: block;
+    }
+
+    .container-card {
+      width: 100%;
+      min-height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px 30px;
+      background-color: transparent;
+    }
+
+    .section-title-flask {
+      text-align: center;
+      font-size: 3.5rem;
+      font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+      line-height: 1;
+      color: #FFFFFF;
+      text-shadow: #111;
+    }
+
+    .content-section {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      gap: 5px;
+      background-color: transparent;
+    }
+
+    .content-section .card {
+      width: 200px;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.2);
+      transform: scale(0.95);
+      transition: transform 200ms ease-in-out;
+    }
+
+    .content-section .card:hover {
+      transform: scale(1);
+    }
+
+    .content-section .card img {
+      width: 100%;
+      height: 300px;
+    }
+
+    .content-section .card h2 {
+      margin: 15px 0px;
+      font-size: 15px;
+      color: #17353d;
+    }
+
+    .content-section .card p {
+      font-size: 16px;
+      line-height: 1.5;
+      padding: 0px 10px;
+      margin-bottom: 20px;
+    }
+
+    #footer {
+      width: 100%;
+      height: auto;
+      padding: 100px;
+      background-image: linear-gradient(
+        to top,
+        #63b4ff,
+        #00cfff,
+        #00e6f2,
+        #00f7bc,
+        #91ff79
+      );
+    }
+
+    .footer-row {
+      display: flex;
+    }
+
+    .footer-col {
+      width: calc(100% / 3);
+    }
+
+    .logo-footer {
+      max-width: 200px;
+      filter: drop-shadow(10px 7px 5px black);
+    }
+
+    .btn2 {
+      display: inline-block;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #000;
+      font-weight: bold;
+      height: 33px;
+      font-size: 15px;
+      cursor: pointer;
+      background: transparent;
+      padding: 6px;
+      color: #000;
+      transition: all 0.3s;
+    }
+
+    .btn2:hover {
+      background: #FFFFFF;
+      color: #000;
+      transform: scaleX(1);
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .social-links h2 {
+      padding-bottom: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .social-links img {
+      padding-bottom: 25px;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 3rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      color: #000;
+    }
+
+    .social-icons a {
+      font-size: 18px;
+      margin-right: 18px;
+      color: #000;
+    }
+
+    .social-icons a:hover {
+      color: #000;
+    }
+
+    .social-icons a i {
+      box-shadow: rgb(0 0 0 / 8%) 0px 4px 12px;
+      padding: 0.4rem 1rem 0.4rem 1rem;
+      border-radius: 5px;
+      color: #000;
+      font-size: 16px;
+      margin-right: 12px;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .useful-link h2 {
+      padding-bottom: 15px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .useful-link img {
+      padding-bottom: 15px;
+    }
+
+    .use-links {
+      line-height: 32px;
+    }
+
+    .use-links li i {
+      font-size: 14px;
+      padding-right: 8px;
+      color: #000;
+    }
+
+    .use-links li a {
+      color: #000;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .use-links li a:hover {
+      color: #fff;
+    }
+
+    .address h2 {
+      padding-bottom: 15px;
+      font-size: 20px;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+
+    .address img {
+      padding-bottom: 15px;
+    }
+
+    .address-links li a {
+      color: #000;
+      font-size: 15px;
+      font-weight: 500;
+      color: #000;
+    }
+
+    .address-links li i {
+      font-size: 16px;
+      padding-right: 8px;
+      color: #000;
+    }
+
+    .address-links li i:nth-child(1) {
+      padding-top: 9px;
+    }
+
+    .address-links .address1 {
+      font-weight: 500;
+      font-size: 15px;
+      display: flex;
+    }
+
+    .address-links {
+      line-height: 32px;
+      color: #000;
+    }
+
+    .copy-right-sec {
+      padding: 10px;
+      background: #0b0f0e;
+      color: #fff;
+      text-align: center;
+    }
+
+    .copy-right-sec a {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    @media screen and (max-width: 1024px) {
+      #others {
+        height: auto;
+        padding: 10px;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      section {
+        width: 100%;
+        height: auto;
+      }
+
+      .featured {
+        height: 100%;
+      }
+
+      #others {
+        height: auto;
+        padding: 10px;
+      }
+
+      .container-card {
+        padding: 10px;
+        height: auto;
+      }
+
+      #footer {
+        padding: 10px;
+        height: auto;
+      }
+
+      .footer-col {
+        width: calc(88% / 2);
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      section {
+        width: 100%;
+        height: auto;
+      }
+
+      .featured {
+        height: 100%;
+      }
+
+      #product {
+        height: auto;
+      }
+
+      .container-product {
+        height: 50rem;
+        flex-direction: column;
+      }
+
+      .more_products_info {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        top: 50%;
+        left: 50%;
+        color: #fff;
+        transform: translate(-50%, -50%);
+      }
+
+      #others {
+        height: auto;
+        padding: 10px;
+      }
+
+      .container-card {
+        padding: 10px;
+        height: auto;
+      }
+
+      #footer {
+        padding: 10px;
+        height: auto;
+      }
+
+      .footer-row {
+        flex-direction: column;
+      }
+
+      .footer-col {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <header class="hero">
+      <div class="container spacing">
+        <h1 class="primary-title">
+          Drink <span style="color: #f0034a">more.</span> Live
+          <span style="color: #2d82ce">more!</span>
+        </h1>
+        <p>
+          Discover the benefits of optimal hydration. We believe in the power of
+          hydration to transform lives!
+        </p>
+        <a href="#featured-product" class="btn">See what we have</a>
+      </div>
+    </header>
+    <main>
+      <section class="featured" id="featured-product">
+        <div class="container">
+          <h2 class="section-title">Featured Aquaflask</h2>
+          <div class="split">
+            <a href="#footer" class="featured__item">
+              <img
+                src="https://aquaflask.com/wp-content/uploads/2023/05/My-project-91-1024x1024.webp"
+                alt="AquaFlask"
+                class="featured__img"
+              />
+              <p class="featured__details">
+                <span class="price">P700</span>Moss Green
+              </p>
+            </a>
+            <a href="#footer" class="featured__item">
+              <img
+                src="https://aquaflask.com/wp-content/uploads/2023/05/My-project-82-1024x1024.webp"
+                alt=""
+                class="featured__img"
+              />
+              <p class="featured__details">
+                <span class="price">P799</span>Plumpy Peach
+              </p>
+            </a>
+            <a href="#footer" class="featured__item">
+              <img
+                src="https://aquaflask.com/wp-content/uploads/2023/05/My-project-2023-05-12T134907.605.webp"
+                alt=""
+                class="featured__img"
+              />
+              <p class="featured__details">
+                <span class="price">P850</span>Space Black
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="product">
+        <h2 class="title">Flask colors</h2>
+        <div class="container-product">
+          <div
+            style="
+              background-image: url('https://goaquaflask.com/wp-content/uploads/2022/02/IMG_87052-768x768.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱650</span>Sienna Red
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflask.com/wp-content/uploads/2023/05/My-project-2023-05-12T114821.829.webp');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱550</span>Silver Steel
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://goaquaflask.com/wp-content/uploads/2021/08/AQF-40oz-Grape-1-300x300.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱850</span>Amethyst
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflask.com/wp-content/uploads/2022/12/STELLAR_topaz18oz-04-removebg-preview-1.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱790</span>Topaz
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://goaquaflask.com/wp-content/uploads/2021/08/AQF-40oz-Hunter-Green-1-300x300.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱850</span>Hunter Green
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://goaquaflask.com/wp-content/uploads/2021/08/AQF-18oz-Marine-Blue-1-300x300.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱650</span>Marine Blue
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflask.com/wp-content/uploads/2021/08/64_wyt1-768x768.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱1395</span>Arctic White
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://goaquaflask.com/wp-content/uploads/2021/12/22oz_flamingo_box-removebg-preview.png');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱700</span>Flamingo
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflask.com/wp-content/uploads/2023/05/My-project-47-1024x1024.webp');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱790</span>Rose Quartz
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflaskinstaller.iconvertwebsite.com/wp-content/uploads/2023/05/Tangerine_22oz-2-removebg-preview.webp');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱750</span>Tangerine
+            </p>
+          </div>
+          <div
+            style="
+              background-image: url('https://aquaflask.com/wp-content/uploads/2023/05/My-project-77.webp');
+            "
+          >
+            <p class="more_products_info">
+              <span class="price">₱750</span>Aquamarine
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="others">
+        <h1 class="section-title-flask">Flask Capacity</h1>
+        <div class="container-card">
+          <div class="content-section">
+            <div class="card">
+              <a href="#footer"
+                ><img
+                  src="https://raw.githubusercontent.com/lvlyslv20/Picture/main/14-removebg-preview.png"
+              /></a>
+              <h2>14 Oz</h2>
+              <p>See details</p>
+            </div>
+            <div class="card">
+              <a href="#footer"
+                ><img
+                  src="https://aquaflask.com/wp-content/uploads/2022/09/18.png"
+              /></a>
+              <h2>18 Oz</h2>
+              <p>See details</p>
+            </div>
+            <div class="card">
+              <a href="#footer"
+                ><img
+                  src="https://aquaflask.com/wp-content/uploads/2022/09/22.png"
+              /></a>
+              <h2>22 Oz</h2>
+              <p>See details</p>
+            </div>
+            <div class="card">
+              <a href="#footer"
+                ><img
+                  src="https://aquaflask.com/wp-content/uploads/2022/09/32.png"
+              /></a>
+              <h2>32 Oz</h2>
+              <p>See details</p>
+            </div>
+            <div class="card">
+              <a href="#footer">
+                <img
+                  src="https://raw.githubusercontent.com/lvlyslv20/Picture/main/40-removebg-preview.png"
+              /></a>
+              <h2>40 Oz</h2>
+              <p>See details</p>
+            </div>
+            <div class="card">
+              <a href="#footer"
+                ><img
+                  src="https://raw.githubusercontent.com/lvlyslv20/Picture/main/64-removebg-preview.png"
+              /></a>
+              <h2>64 Oz</h2>
+              <p>See details</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-row">
+          <div class="footer-col">
+            <a href="index.html"
+              ><img
+                src="https://aquaflask.com/wp-content/uploads/2021/07/14-768x768.png"
+                alt=""
+                class="img-fluid logo-footer"
+            /></a>
+            <div class="footer-about">
+              <p>
+                AquaFlask is designed to be durable with its ergonomic design.
+                What's more? Everyone gets a limited 1-year warranty with
+                purchase of AquaFlask.
+              </p>
+              <a href="#" class="btn2">Buy Now </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="social-links">
+              <h2>Follow Us</h2>
+              <img src="./assets/images/about/home_line.png" alt="" />
+              <div class="social-icons">
+                <li>
+                  <a href=""
+                    ><i class="fa-brands fa-facebook-f"></i> Facebook</a
+                  >
+                </li>
+                <li>
+                  <a href=""><i class="fa-brands fa-instagram"></i>Instagram</a>
+                </li>
+              </div>
+            </div>
+          </div>
+          <div class="footer-col">
+            <div class="address">
+              <h2>Address</h2>
+              <img
+                src="./assets/images/about/home_line.png"
+                alt=""
+                class="img-fluid"
+              />
+              <div class="address-links">
+                <li class="address1">
+                  <i class="fa-solid fa-location-dot"></i> San Pablo, Sto.
+                  Tomas, Batangas
+                </li>
+                <li>
+                  <a href=""><i class="fa-solid fa-phone"></i> 09631895060</a>
+                </li>
+                <li>
+                  <a href=""
+                    ><i class="fa-solid fa-envelope"></i> salvelynz@gmail.com</a
+                  >
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="copy-right">
+      <div class="copy-right-sec">
+        &copy; Copyright
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        <a href="#">AquaFlask</a>
+      </div>
+    </div>
+  </body>
+</html>
