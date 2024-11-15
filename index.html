@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lovely's page</title>
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20230317/ourmid/pngtree-cute-drawing-cartoon-girl-for-profile-picture-vector-png-image_6650753.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+</head>
+
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background-color: #40534C;
+        color: #e1eeee;
+
+    }
+
+    .navbar {
+        background-color: #40534C;
+
+    }
+
+    .navbar a {
+        color: #edf5ee;
+
+    }
+
+    .btnCv {
+        background-color: #1A3636;
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: #e1eeee;
+        margin-top: 8px;
+        display: inline-block;
+    }
+
+    .btnCv:hover {
+        background-color: #677D6A;
+        color: #ffffff;
+    }
+
+    .visit {
+        color: aquamarine;
+        text-decoration: white;
+    }
+
+    .highlight {
+        font-weight: 700;
+    }
+
+    .content-section p {
+        font-size: 20px;
+    }
+
+    .social-links a {
+        margin-right: 15px;
+        font-size: 1.5rem;
+        text-decoration: none;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .social-links a:hover {
+        color: #677D6A;
+
+    }
+
+    .projects {
+        height: 100vh;
+    }
+
+    .section-title-wrap {
+        display: block;
+        margin: auto;
+        position: relative;
+        text-align: center;
+
+    }
+
+    .section-title {
+        font-size: 50px;
+    }
+
+    .section-title-line {
+        background: #677D6A;
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 2px;
+        margin: 0 auto;
+    }
+
+    .section-title-icon {
+        color: #1A3636;
+        font-size: 24px;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .image-section img {
+        height: 520px;
+        width: 420px;
+        margin-top: 20px;
+    }
+
+    .image-hover-thumb {
+        border-radius: 20px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .image-hover-thumb:hover .img-fluid {
+        transform: scale(1.05);
+    }
+
+    .image-hover-thumb .img-fluid {
+        border-radius: 10px;
+        display: block;
+        transition: all 0.5s;
+    }
+
+    .name {
+        color: #e1eeee;
+        text-decoration: none;
+    }
+
+    .nav-tabs {
+        border-bottom: 0;
+        margin-top: 20px;
+    }
+
+    .nav-tabs .nav-link {
+        color: #e1eeee;
+        display: block;
+        text-align: left;
+    }
+
+    .nav-tabs .nav-link {
+        border-radius: 0;
+        border: 0;
+        border-right: 2px solid #e9eaeb;
+        border-bottom: 1px solid #e9eaeb;
+        width: 100%;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+    }
+
+    .nav-tabs .nav-link:last-child {
+        border-bottom: 0;
+    }
+
+    .nav-tabs .nav-link::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: 19px;
+        height: 19px;
+        background: transparent;
+        text-indent: -9999px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        transition: all 250ms ease-in-out;
+        text-decoration: none;
+        color: transparent;
+        top: 50%;
+        right: -11px;
+        transform: translate(0, -50%) rotate(135deg);
+    }
+
+    .nav-tabs .nav-link.active::after {
+        background: #ffffff;
+        border-top-color: #1A3636;
+        border-left-color: #1A3636;
+    }
+
+    .nav-tabs .nav-item.show .nav-link,
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-link:focus {
+        border-color: #677D6A;
+        border-right-color: #1A3636;
+    }
+
+    .nav-tabs .nav-link.active h3,
+    .nav-tabs .nav-link:focus h3,
+    .nav-tabs .nav-link:hover h3 {
+        color: #1A3636;
+    }
+</style>
+
+<body id="body">
+    <nav class="navbar navbar-expand-lg shadow" style="position: fixed; top: 0; width: 100%; z-index: 1000">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#home">Lovely<span class="lname" style="color: #e1eeee">Salve</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#activities">Activities</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="home">
+        <div class="row w-100 align-items-center justify-content-center">
+            <div class="col-12 col-md-5 sm-6 mt-5 image-section">
+                <img src="assets/pic_processed.jpg" alt="Lovely Salve's Image" class="img-fluid" />
+            </div>
+            <div class="col-12 col-md-5 content-section text-center text-md-start">
+                <h1>Hello, I'm <span class="highlight">Lovely Salve</span></h1>
+                <p>
+                    A <span class="highlight">fourth-year</span> student currently
+                    pursuing a
+                    <span class="highlight">Bachelor of Science in Information Technology.</span>
+                </p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=100008931993440" target="_blank"
+                        class="fab fa-facebook"></a>
+                    <a href="https://www.instagram.com/itsyouelyy.png/profilecard/?igsh=MTE3YnVib3N5aXV2aw=="
+                        target="_blank" class="fab fa-instagram"></a>
+                    <a href="https://github.com/lvlyslv20" target="_blank" class="fab fa-github"></a>
+                </div>
+                <a href="assets/" class="btnCv">Download CV</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="activities-section " id="activities">
+        <div class="container projects mt-5">
+            <div class="row">
+                <div class="col-lg-12 col-12 mt-5">
+                    <div class="section-title-wrap mt-5">
+                        <h2 class="section-title">ACTIVITIES</h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-5 col-12 me-auto mt-5">
+                    <nav>
+                        <div class="nav nav-tabs flex-lg-column align-items-center ml-5" id="nav-tab" role="tablist">
+                            <button class="nav-link active" id="nav-activities-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-activities" type="button" role="tab" aria-controls="nav-activities"
+                                aria-selected="true">
+                                <h3>Activities</h3>
+                            </button>
+                            <button class="nav-link" id="nav-projects-tab" data-bs-toggle="tab"
+                                data-bs-target="#nav-projects" type="button" role="tab" aria-controls="nav-projects"
+                                aria-selected="false">
+                                <h3>2023-2024</h3>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-8 col-md-6 col-12 mt-5">
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-activities" role="tabpanel"
+                            aria-labelledby="nav-activities-tab">
+                            <div class="row">
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/TrifoldA4.png" class="activities-image img-fluid"
+                                            alt="TrifoldA4">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+                                            <h4 class="name">ASUS TUF GAMING F15</h4>
+                                            <span class="about-tag ms-2">Activity 1</span>
+                                        </div>
+
+                                        <p>Created a tri-fold A4 brochure that showcases the laptop's attributes,
+                                            properties, and characteristics.</p>
+                                        <a href="https://simplebooklet.com/salve_sam01act" class="visit">Visit</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/BoracayIsland.png" class="activities-image img-fluid"
+                                            alt="BoracayIsland">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+
+                                            <h4 class="name">Boracay Island</h4>
+                                            <span class="about-tag ms-2">Activity 2</span>
+                                        </div>
+                                        <p>A popular tourist destination, it offers a range of activities, and relaxing
+                                            resorts, and those looking to unwind.</p>
+                                        <a href="https://lvlyslv20.github.io/" class="visit">Visit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade show" id="nav-projects" role="tabpanel"
+                            aria-labelledby="nav-projects-tab">
+                            <div class="row">
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/404.png" class="activities-image img-fluid" alt="404 image">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+                                            <h4 class="name">404 Page</h4>
+                                        </div>
+                                        <p>We designed a 404 landing page.</p>
+                                        <a href="https://lvlyslv20.github.io/3-1/404/index.html" class="visit">Visit</a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/Parallax.png" class="activities-image img-fluid" alt="Parallax">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+                                            <h4 class="name">Inside Out Parallax</h4>
+                                        </div>
+                                        <p>A parallax containing the characters of inside out .</p>
+                                        <a href="https://lvlyslv20.github.io/3-1/EZ-Parallax-master/index.html"
+                                            class="visit">Visit</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/Spiderman.png" class="activities-image img-fluid"
+                                            alt="Spiderman">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+                                            <h4 class="name">API</h4>
+                                        </div>
+                                        <p>An API of heroes and villains.</p>
+                                        <a href="https://lvlyslv20.github.io/3-1/api/index.html" class="visit">Visit</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12 mb-3">
+                                    <div class="activities-thumb image-hover-thumb">
+                                        <img src="assets/aquaflask.png" class="activities-image img-fluid"
+                                            alt="aquaflask">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-12">
+                                    <div class="section-block">
+                                        <div class="d-flex align-items-center my-3">
+                                            <h4 class="name">Aquaflask </h4>
+                                        </div>
+                                        <p>Designed an aquaflask website.</p>
+                                        <a href="https://lvlyslv20.github.io/3-1/Aquaflask/aquaflask.html" class="visit">Visit</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

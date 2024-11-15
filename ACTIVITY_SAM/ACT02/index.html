@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Boracay Island</title>
+    <link
+      rel="icon"
+      href="https://cdn.dribbble.com/users/3133697/screenshots/11109329/media/52c90f688fa2dbc50de7a9a74c34810a.png?compress=1&resize=700x525&vertical=top"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    .title {
+      font-size: 60px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .name {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-size: 50px;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .info {
+      font-size: 20px;
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .welcome-section {
+      padding-bottom: 40px;
+    }
+
+    .welcome-section img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .border {
+      border-top: 1px solid #999;
+      border-bottom: 1px solid #999;
+      margin: 0 45%;
+    }
+  </style>
+  <body data-bs-theme="light" id="body">
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary shadow"
+      style="position: fixed; top: 0; width: 100%; z-index: 1000"
+    >
+      <div class="container px-5">
+        <a class="navbar-brand" href="#home">Boracay</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#activities">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#villa">Boracay Villas</a>
+            </li>
+          </ul>
+          <button class="btn" id="btnColor" onclick="changeColorMode()">
+            Dark Mode
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid px-4 px-lg-5" style="height: 100vh" id="home">
+      <div
+        class="row gx-4 gx-lg-5 align-items-center my-5"
+        style="height: 100%"
+      >
+        <div class="col-lg-7 d-flex align-items-center justify-content-center">
+          <img
+            class="img-fluid rounded mb-4 mb-lg-0"
+            src="https://www.discoverthephilippines.com/wp-content/uploads/2020/12/article-cover-photo-boracay.jpg"
+            alt="Boracay Island"
+            style="max-height: 100%; object-fit: cover"
+          />
+        </div>
+        <div class="col-lg-5 d-flex flex-column justify-content-center">
+          <h1 class="title font-weight-light">Boracay Island</h1>
+          <p class="info">
+            Boracay is a small tropical island in the Philippines known for its
+            stunning white-sand beaches, crystal-clear waters, and vibrant
+            nightlife. A popular tourist destination, it offers a range of
+            activities, including water sports, diving, island-hopping, and
+            relaxing resorts, making it a perfect getaway for both adventure
+            seekers and those looking to unwind.
+          </p>
+        </div>
+      </div>
+      <div>
+        <div class="title my-5 py-4 text-center" id="activities">
+          <div class="card-body">
+            <p class="name mt-5 p-4 display-4">
+              Exciting Activities to Explore
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2019/02/Boracay-Sunset-Cruise-00-400x267.jpg"
+                class="card-img-top"
+                alt="Sunset cruise"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Sunset cruise</b> <br />Tour along White Beach and take in
+                  all the tropical sights and sounds while you enjoy the
+                  spectacular arrays of color of the Boracay sunset.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2019/03/Boracay-Group-Island-Hopping-Boracay-Activities-01-400x267.jpg"
+                class="card-img-top"
+                alt="Group Island Hopping"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Group Island Hopping</b><br />
+                  Visit the famous Puka shell beach and take a stroll on the
+                  beach, swim in the azure waters or just relax with a fresh
+                  coconut enjoying the sun
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/04/Parasailing-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Parasailing"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Parasailing</b> <br />
+                  Parasailing on Boracay is a great experience for a few
+                  adventure-minded individuals. Imagine being whisked into the
+                  sky while strapped
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/10/Stand-Up-Paddle-Boracay-Activity-01.jpg"
+                class="card-img-top"
+                alt="Stand Up Paddle on the Beach"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Stand Up Paddle on the Beach</b> <br />Experience how it’s
+                  like to glide on the water surface . It lets you commune with
+                  the current of the sea, either by standing up, kneeling or
+                  sitting down.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2010/01/Boracay-Helicopter-Tours-Boracay-Activity-07-400x267.jpg"
+                class="card-img-top"
+                alt="Helicopter Island Tour"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Helicopter Island Tour </b><br />If you can’t get enough of
+                  the spectacular view, take the 15-minute Helicopter Island
+                  Tour! Get a glimpse of Tambisaan
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/03/10-Private-Yacht-Sailing-400x267.jpeg"
+                class="card-img-top"
+                alt="Private Yacht Sailing"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Private Yacht Sailing</b> <br />This is the highest-end
+                  luxury tour offering. it is fully equipped with everything you
+                  need for acomfortable voyage
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/03/Wind-Surfing-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Wind Surfing"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Wind Surfing</b> <br />Wind surfing is a combination of
+                  sailing and surfing, where you can ride the waves while
+                  sailing strong winds.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/04/Kiteboarding-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Kite Boarding"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Kite Boarding</b> <br />Boracay Kiteboarding is very well
+                  known as the best kite surfing location in Asia. Bulabog
+                  beach, or Boracay.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/04/Scuba-Diving-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Scuba Diving"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Scuba Diving</b><br />The Open Water course is a 3-4 days’
+                  worth of diving lessons where you will learn how to breathe
+                  underwater.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/03/Banana-Boat-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Banana Boat"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Banana Boat</b><br />
+                  The Banana Boat is a great way for a group to have an
+                  exciting, speed-induced ride off Boracay’s white beach!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/04/Jet-Ski-Boracay-Activities.jpg"
+                class="card-img-top"
+                alt="Jet Ski"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Jet Ski</b> <br />Adults 18yrs old and above are allowed to
+                  drive the units Your vacation wouldn’t be complete without a
+                  fun Boracay
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <div class="card mb-3 shadow">
+              <img
+                src="https://cdn5.myboracayguide.com/2016/04/Helmet-Dive-Boracay-Activities-1-400x267.jpg"
+                class="card-img-top"
+                alt="Helmet Dive"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  <b>Helmet Dive</b> <br />Only 13 yrs old and above are allowed
+                  to dive Spend a blissful rendezvous underwater with vibrant
+                  fishes and corals
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container" id="villa">
+          <div>
+            <div class="title my-5 py-4 text-center" id="activities">
+              <div class="card-body">
+                <p class="name mt-5 p-4 display-4">
+                  Boracay Villa Custom Vacations
+                </p>
+                <h5>Special Places at Discounted Rates</h5>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="welcome-section text-center">
+                <img
+                  src="https://myboracayguide.com/boracay-villas/wp-content/uploads/2019/04/10-Mabuhay.jpg"
+                  class="img-responsive"
+                  alt=".."
+                />
+                <h4>Mabuhay Beach House</h4>
+                <div class="border"></div>
+                <h4 class="text-primary">₱17,000 /night</h4>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="welcome-section text-center">
+                <img
+                  src="https://myboracayguide.com/boracay-villas/wp-content/uploads/2023/09/10-Mayum-Beach-House.jpg"
+                  class="img-responsive"
+                  alt=".."
+                />
+                <h4>Mayumi Beach House</h4>
+                <div class="border"></div>
+                <h4 class="text-primary">₱49,000 /night</h4>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="welcome-section text-center">
+                <img
+                  src="https://myboracayguide.com/boracay-villas/wp-content/uploads/2023/09/999-7Stones-Boracay-Premier-2BR-Sky-Suite-with-Pool-Old.jpg"
+                  class="img-responsive"
+                  alt=".."
+                />
+                <h4>Premier Sky Suite with Pool</h4>
+                <div class="border"></div>
+                <h4 class="text-primary">₱28,572 /night</h4>
+              </div>
+            </div>
+
+            <footer>
+              <div class="footer-container text-center mt-5 mb-0">
+                <div class="footer-message">
+                  <p>&copy; 2024 Boracay. All rights reserved.</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var colorMode = "light";
+      function changeColorMode() {
+        if (colorMode == "light") {
+          document.getElementById("body").setAttribute("data-bs-theme", "dark");
+          document.getElementById("btnColor").innerHTML = "Light Mode";
+          colorMode = "dark";
+        } else {
+          document
+            .getElementById("body")
+            .setAttribute("data-bs-theme", "light");
+          document.getElementById("btnColor").innerHTML = "Dark Mode";
+          colorMode = "light";
+        }
+      }
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
