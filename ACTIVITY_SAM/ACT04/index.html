@@ -33,14 +33,15 @@
 
         .imgContainer img {
             width: 200px;
-            height: 200px;
+            height: 180px;
             cursor: pointer;
         }
 
         .name {
             color: #393E46;
             font-size: 23px;
-
+            
+            
         }
 
         .typeInfo {
@@ -117,12 +118,12 @@
 
             currentAmiibos.forEach(amiibo => {
                 container.innerHTML += `
-                    <div class="col-12 col-lg-6 md-2 mb-4">
-                        <div class="card  shadow p-4 d-flex flex-row align-items-center">
+                    <div class="col-12 col-lg-6 md-4 sm-2 mb-4">
+                        <div class="card  shadow p-3 d-flex flex-row align-items-center">
                             <div class="imgContainer">
                                 <img src="${amiibo.image}" alt="${amiibo.name}" onclick="viewInfo('${amiibo.name}')">
                             </div>
-                            <div class="ps-4">
+                            <div class="ps-2">
                                 <h2 class="name">${amiibo.character}</h2>
                                 <p class="typeInfo"><strong>Type:</strong> ${amiibo.type}</p>
                             </div>
