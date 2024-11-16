@@ -40,7 +40,7 @@
 
         .name {
             color: #393E46;
-            font-size: 3rem;
+            font-size: 30px;
 
         }
 
@@ -118,7 +118,7 @@
 
             currentAmiibos.forEach(amiibo => {
                 container.innerHTML += `
-                    <div class="col-12 col-lg-6 md-12 mb-4">
+                    <div class="col-12 col-lg-6 md-2 mb-4">
                         <div class="card  shadow p-4 d-flex flex-row align-items-center">
                             <div class="imgContainer">
                                 <img src="${amiibo.image}" alt="${amiibo.name}" onclick="viewInfo('${amiibo.name}')">
