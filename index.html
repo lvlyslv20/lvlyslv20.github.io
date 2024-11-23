@@ -74,14 +74,31 @@
 
 
     .visit {
-        color: aquamarine;
-        text-decoration: white;
 
+        color: white;
+        padding: 3px 4px;
+        border: 2px solid gainsboro;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        margin-top: 30px;
+    }
+
+    .visit:hover {
+        background-color: #638f8d;
+        transform: translateY(-3px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .visit:active {
+        transform: translateY(0);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
     }
 
     .highlight {
         font-weight: 700;
-
         text-align: center;
     }
 
@@ -149,14 +166,19 @@
     .image-section {
         height: 520px;
         width: 420px;
+        display: flex;
+        justify-content: center;
     }
 
     .image-section img {
         height: 420px;
         width: 320px;
-        margin-top: 40px;
-        margin-left: 30px;
-        border-radius: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 250px;
+        margin-left: 20px;
+        margin-top: 30px;
     }
 
     .image-hover-thumb {
@@ -273,7 +295,7 @@
             <div class="col-12 col-md-5 sm-6 mt-5 image-section">
                 <img src="assets/pic_processed.jpg" alt="Lovely Salve's Image" class="img-fluid" />
             </div>
-            <div class="col-12 col-md-5 content-section text-center text-md-start">
+            <div class="col-12 col-md-5 content-section text-center text-md-center">
                 <h1 class="greet">Hello, I am <span class="highlight">Lovely Salve</span></h1>
                 <p>
                     A <span class="highlight">fourth-year</span> student currently
@@ -330,14 +352,16 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">ASUS TUF GAMING F15</h4>
                                             <span class="about-tag ms-2">Activity 1</span>
                                         </div>
 
                                         <p>Created a tri-fold A4 brochure that showcases the laptop's attributes,
-                                            properties, and characteristics.</p>
-                                        <a href="https://simplebooklet.com/salve_sam01act" class="visit">Visit</a>
+                                            properties, and characteristics. <br> <a
+                                                href="https://simplebooklet.com/salve_sam01act" class="visit">Visit</a>
+                                        </p>
+
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -348,15 +372,16 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
 
                                             <h4 class="name">Boracay Island</h4>
                                             <span class="about-tag ms-2">Activity 2</span>
                                         </div>
                                         <p>A popular tourist destination, it offers a range of activities, and relaxing
-                                            resorts, and those looking to unwind.</p>
-                                        <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT02/index.html"
-                                            class="visit">Visit</a>
+                                            resorts, and those looking to unwind. <br>
+                                            <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT02/index.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -367,12 +392,13 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Github Page</h4>
                                             <span class="about-tag ms-2">Activity 3</span>
                                         </div>
-                                        <p>List of activities.</p>
-                                        <a href="https://lvlyslv20.github.io/index.html" class="visit">Visit</a>
+                                        <p>List of activities.<br>
+                                            <a href="https://lvlyslv20.github.io/index.html" class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -382,13 +408,15 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Amiibo APi </h4>
                                             <span class="about-tag ms-2">Activity 4</span>
                                         </div>
-                                        <p>List type of amiibo api.</p>
-                                        <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT04/index.html"
-                                            class="visit">Visit</a>
+                                        <p>List type of amiibo api.
+                                            <br>
+                                            <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT04/index.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -398,13 +426,14 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Video Embedded </h4>
                                             <span class="about-tag ms-2"> Mid-Part 1</span>
                                         </div>
-                                        <p>All about Minions</p>
-                                        <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/MID01/index.html"
-                                            class="visit">Visit</a>
+                                        <p>All about Minions. <br>
+                                            <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/MID01/index.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -420,11 +449,13 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">404 Page</h4>
                                         </div>
-                                        <p>We designed a 404 landing page.</p>
-                                        <a href="https://lvlyslv20.github.io/3-1/404/index.html" class="visit">Visit</a>
+                                        <p>We designed a 404 landing page.<br>
+                                            <a href="https://lvlyslv20.github.io/3-1/404/index.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -435,11 +466,13 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">API</h4>
                                         </div>
-                                        <p>An API of heroes and villains.</p>
-                                        <a href="https://lvlyslv20.github.io/3-1/api/index.html" class="visit">Visit</a>
+                                        <p>An API of heroes and villains.<br>
+                                            <a href="https://lvlyslv20.github.io/3-1/api/index.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-12 mb-3">
@@ -450,12 +483,13 @@
                                 </div>
                                 <div class="col-lg-6 col-12">
                                     <div class="section-block">
-                                        <div class="d-flex align-items-center my-3">
+                                        <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Aquaflask </h4>
                                         </div>
-                                        <p>Designed an aquaflask website.</p>
-                                        <a href="https://lvlyslv20.github.io/3-1/Aquaflask/aquaflask.html"
-                                            class="visit">Visit</a>
+                                        <p>Designed an aquaflask website. <br>
+                                            <a href="https://lvlyslv20.github.io/3-1/Aquaflask/aquaflask.html"
+                                                class="visit">Visit</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
