@@ -1,166 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SuperHero</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://cdn0.iconfinder.com/data/icons/people-lifestyle/100/People-06-512.png"
-    />
-    <link rel="stylesheet" href="main.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
 
-  <body>
-    <div class="main-wrapper">
-      <div class="app">
-        <div class="app-header">
-          <h2 class="app-header-title">Super<span class="typed"></span></h2>
-          <form class="app-header-search">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Type your hero"
-              name="search"
-            />
-            <button type="submit" class="search-btn">
-              <i class="fas fa-search"></i>
-            </button>
-            <div class="search-list" id="search-list"></div>
-          </form>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SuperHero</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://cdn0.iconfinder.com/data/icons/people-lifestyle/100/People-06-512.png" />
+  <link rel="stylesheet" href="main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-        <div class="app-body">
-          <div class="app-body-content">
-            <div class="app-body-content-list">
-              <div class="name"></div>
+<body>
+  <div class="main-wrapper">
+    <div class="app">
+      <div class="app-header">
+        <h2 class="app-header-title">Super<span class="typed"></span></h2>
+        <form class="app-header-search">
+          <input type="text" class="form-control" placeholder="Type your hero" name="search" />
+          <button type="submit" class="search-btn">
+            <i class="fas fa-search"></i>
+          </button>
+          <div class="search-list" id="search-list"></div>
+        </form>
+      </div>
 
-              <!-- tabs head -->
-              <div class="app-body-tabs-head">
-                <button type="button" class="tab-head-single" data-id="1">
-                  <span>powerstats</span>
-                </button>
-                <button type="button" class="tab-head-single" data-id="2">
-                  <span>biography</span>
-                </button>
-              </div>
-
-              <div class="app-body-tabs-body">
-                <ul class="tab-body-single powerstats">
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                  <li>
-                    <div>
-                      <i class="fa-solid fa-shield-halved"></i>
-                      <span></span>
-                    </div>
-                    <span></span>
-                  </li>
-                </ul>
-
-                <ul class="tab-body-single biography">
-                  <li>
-                    <span>full name:</span>
-                    <span></span>
-                  </li>
-                  <li>
-                    <span>alert-egos:</span>
-                    <span></span>
-                  </li>
-                  <li>
-                    <span>aliases:</span>
-                    <span></span>
-                  </li>
-                  <li>
-                    <span>place-of-birth:</span>
-                    <span></span>
-                  </li>
-                  <li>
-                    <span>first-apperance:</span>
-                    <span></span>
-                  </li>
-                  <li>
-                    <span>publisher:</span>
-                    <span></span>
-                  </li>
-                </ul>
-              </div>
+      <div class="app-body">
+        <div class="app-body-content">
+          <div class="app-body-content-list">
+            <div class="name"></div>
+            <div class="app-body-tabs-head">
+              <button type="button" class="tab-head-single" data-id="1">
+                <span>powerstats</span>
+              </button>
+              <button type="button" class="tab-head-single" data-id="2">
+                <span>biography</span>
+              </button>
             </div>
 
-            <div class="app-body-content-thumbnail">
-              <img src="" />
+            <div class="app-body-tabs-body">
+              <ul class="tab-body-single powerstats">
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+                <li>
+                  <div>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span></span>
+                  </div>
+                  <span></span>
+                </li>
+              </ul>
+
+              <ul class="tab-body-single biography">
+                <li>
+                  <span>full name:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>alert-egos:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>aliases:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>place-of-birth:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>first-apperance:</span>
+                  <span></span>
+                </li>
+                <li>
+                  <span>publisher:</span>
+                  <span></span>
+                </li>
+              </ul>
             </div>
+          </div>
+
+          <div class="app-body-content-thumbnail">
+            <img src="" />
           </div>
         </div>
       </div>
-
-      <section class="meme-generator">
-        <div class="memeTitle">
-          <h2>Random Meme Generator</h2>
-        </div>
-        <div class="results">
-          <div id="fox_result" class="result">
-            <p>Random Fox</p>
-          </div>
-
-          <div class="buttons">
-            <button class="btn" id="fox_btn">Generate meme</button>
-          </div>
-        </div>
-      </section>
     </div>
 
-    <script src="app.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-      const typed = new Typed(".typed", {
-        strings: ["Hero", "Villain", "Legends"],
-        typedSpeed: 80,
-        backSpeed: 50,
-        loop: true,
-      });
-    </script>
-  </body>
+    <section class="meme-generator">
+      <div class="memeTitle">
+        <h2> Meme Generator</h2>
+      </div>
+      <div class="results">
+        <div id="fox_result" class="result">
+          <p>Random Fox</p>
+        </div>
+
+        <div class="buttons">
+          <button class="btn" id="fox_btn">Generate meme</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  <script>
+    const typed = new Typed(".typed", {
+      strings: ["Hero", "Villain", "Legends"],
+      typedSpeed: 80,
+      backSpeed: 50,
+      loop: true,
+    });
+  </script>
+</body>
+
 </html>
