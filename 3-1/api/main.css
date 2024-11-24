@@ -92,7 +92,8 @@ img {
   
 }
 .app-header-search .form-control {
-  min-width: 420px;
+  width: 240px;
+  min-width: 200px;
   color: #fff;
   cursor: pointer;
   color: black;
