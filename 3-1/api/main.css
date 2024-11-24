@@ -417,10 +417,12 @@ img {
   }
   .app-header-search {
     display: flex;
+    width: 200px;
   }
   .app-header-search .form-control {
     min-width: auto;
     color: #000000;
+    width: 200px;
   }
   .app-header-search .search-btn {
     padding-left: 2rem;
