@@ -88,6 +88,8 @@ img {
   position: relative;
   color: black;
   padding: 0px 10px;
+  align-items: center;
+  
 }
 .app-header-search .form-control {
   min-width: 420px;
