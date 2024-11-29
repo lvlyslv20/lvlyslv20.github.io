@@ -89,7 +89,6 @@ img {
   color: black;
   padding: 0px 10px;
   align-items: center;
-  
 }
 .app-header-search .form-control {
   width: 240px;
@@ -356,10 +355,10 @@ img {
 }
 
 @media screen and (max-width: 1000px) {
-  .app{
-      height: auto;
+  .app {
+    height: auto;
   }
-    
+
   .app-body-content-list .name {
     text-align: center;
     margin-top: 1.8rem;
@@ -378,9 +377,9 @@ img {
 }
 
 @media screen and (max-width: 992px) {
-    .app{
-        height: auto;
-    }
+  .app {
+    height: auto;
+  }
 
   .app-header {
     box-orient: vertical;
@@ -394,9 +393,9 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-    .app{
-        height: auto;
-    }
+  .app {
+    height: auto;
+  }
   .app-body-tabs-head {
     box-orient: vertical;
     box-direction: normal;

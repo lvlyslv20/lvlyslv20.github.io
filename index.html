@@ -69,17 +69,114 @@
 
     .btnCv:hover {
         background-color: #677D6A;
-        color: #ffffff;
+        color: #000000;
     }
 
+    .image-section img {
+        border-radius: 10px;
+    }
+
+    .education-images img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px;
+        border-radius: 10px;
+    }
+
+    .marquee-content img {
+        margin: 10px;
+        width: 100px;
+        height: auto;
+    }
+
+    .about {
+        padding-top: 80px;
+    }
+
+    .about h2,
+    .about h3 {
+        line-height: 1.5;
+    }
+
+    .know {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+    }
+
+    .desc {
+        font-size: 20px;
+    }
+
+    @keyframes bounce {
+
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-15px);
+        }
+    }
+
+    .bouncing-image {
+        width: 50%;
+        animation: bounce 1s infinite;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .bouncing-image:hover {
+        transform: scale(1.1);
+    }
+
+    .border {
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .p-4 {
+        padding: 20px;
+    }
+
+    .skills img,
+    .education img,
+    .description img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .border:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+
+        .description,
+        .education,
+        .skills {
+            margin-bottom: 20px;
+        }
+    }
+
+    .description img.rounded-circle {
+        box-shadow: 0 4px 10px rgba(90, 95, 95, 0.6);
+        transition: box-shadow 0.3s ease;
+    }
+
+    .description img.rounded-circle:hover {
+        box-shadow: 0 6px 15px rgba(112, 201, 207, 0.8);
+    }
 
     .visit {
 
-        color: white;
+        color: rgb(3, 43, 41);
         padding: 7px 9px;
-        background-color: #638f8d;
+        background-color: #dce4e3;
         border-radius: 5px;
         font-size: 13px;
+        font-weight: 600;
         cursor: pointer;
         text-decoration: none;
         margin-top: 30px;
@@ -105,7 +202,7 @@
     }
 
     .highlight {
-        font-weight: 700;
+        font-weight: 500;
         text-align: center;
         margin-left: 20px;
     }
@@ -137,6 +234,10 @@
 
     .projects {
         height: 100vh;
+    }
+
+    .about-tag {
+        color: gold;
     }
 
     .section-title-wrap {
@@ -296,6 +397,12 @@
                         <a class="nav-link " aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#aboutme">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#playlist">Playlist</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#activities">Portfolio</a>
                     </li>
                 </ul>
@@ -303,7 +410,7 @@
         </div>
     </nav>
 
-    <div class="container" id="home">
+    <div class="container pb-3 mb-5" id="home">
         <div class="row w-100 align-items-center justify-content-center">
             <div class="col-12 col-md-6 sm-6 mt-5 pt-5 image-section">
                 <img src="assets/pic_processed.jpg" alt="Lovely Salve's Image" class="img-fluid" />
@@ -311,8 +418,7 @@
             <div class="col-12 col-md-6 sm-6 pt-5 content-section text-center text-md-center">
                 <h1 class="greet">Hello, I am<span class="fname"> Lovely Salve</span></h1>
                 <p>
-                    <span class="highlight"> A fourth-year student currently
-                        pursuing a Bachelor of Science in Information Technology.</span>
+                    <span class="highlight"> IT Student | Aspiring QA Tester </span>
                 </p>
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=100008931993440" target="_blank"
@@ -327,11 +433,68 @@
             </div>
         </div>
     </div>
+    <section id="aboutme" class="about mt-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Discover More</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4 mb-md-0 text-center text-md-left">
+                    <div class="description border p-4">
+                        <img src="assets/lvly.jpg" class="img-fluid rounded-circle" alt="Lovely Salve"
+                            style="max-width: 150px;">
+                        <p class="desc mb-5">A fourth-year student currently pursuing a Bachelor of Science in
+                            Information Technology in PUP-STC. I am an aspiring Quality Assurance tester and dedicated
+                            to identifying and resolving issues that impact user experience. Eager to learn in both
+                            manual and automated testing, I aim to contribute to creating high-quality, user-centered
+                            applications.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="education border-bottom p-4 rounded mb-5 mb-md-0">
+                        <h2 class="text-center mb-4">Education</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-4 col-sm-3 col-md-2 text-center">
+                                <img src="assets/logo1.jpg" class="img-fluid" alt="School Logo 1">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 text-center">
+                                <img src="assets/logo2.jpeg" class="img-fluid" alt="School Logo 2">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 text-center">
+                                <img src="assets/logo3.png" class="img-fluid" alt="School Logo 3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills border-bottom rounded">
+                        <h2 class="text-center mb-4 mt-5">Skills</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/html.webp" class="img-fluid bouncing-image" alt="HTML">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/css.webp" class="img-fluid bouncing-image" alt="CSS">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/js.webp" class="img-fluid bouncing-image" alt="JavaScript">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/github.png" class="img-fluid bouncing-image" alt="GitHub">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/figma.png" class="img-fluid bouncing-image" alt="Figma">
+                            </div>
+                            <div class="col-4 col-sm-3 col-md-2 mb-3 text-center">
+                                <img src="assets/canva.webp" class="img-fluid bouncing-image" alt="Canva">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section id="spotify" class="py-5" style="margin-top: 100px;">
+    <section id="playlist" class="py-5" style="margin-top: 250px;">
         <div class="container text-center">
             <marquee behavior="scroll" direction="left" scrollamount="20">
-                <h2 class="mb-4 fw-bold nameColor">My Playlist</h2>
+                <h2 class="mb-4 mt-3 fw-bold nameColor">My Playlist</h2>
             </marquee>
             <p class="mb-4 ">Vibe with me !</p>
             <div class="spotify-container">
@@ -384,12 +547,12 @@
                                     <div class="section-block">
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">ASUS TUF GAMING F15</h4>
-                                            <span class="about-tag ms-2">Activity 1</span>
+                                            <span class="about-tag ms-2 mb-2">(Activity 1)</span>
                                         </div>
 
                                         <p>Created a tri-fold A4 brochure that showcases the laptop's attributes,
-                                            properties, and characteristics. <br> <a
-                                                href="https://simplebooklet.com/salve_sam01act" class="visit">Visit</a>
+                                            properties, and characteristics. <br><br> <a
+                                                href="https://simplebooklet.com/salve_sam01act" class="visit">View</a>
                                         </p>
 
                                     </div>
@@ -405,12 +568,12 @@
                                         <div class="d-flex align-items-center my-0">
 
                                             <h4 class="name">Boracay Island</h4>
-                                            <span class="about-tag ms-2">Activity 2</span>
+                                            <span class="about-tag ms-2 mb-2">(Activity 2)</span>
                                         </div>
                                         <p>A popular tourist destination, it offers a range of activities, and relaxing
-                                            resorts, and those looking to unwind. <br>
+                                            resorts, and those looking to unwind. <br><br>
                                             <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT02/index.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -424,10 +587,10 @@
                                     <div class="section-block">
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Github Page</h4>
-                                            <span class="about-tag ms-2">Activity 3</span>
+                                            <span class="about-tag ms-2 mb-2">(Activity 3)</span>
                                         </div>
-                                        <p>List of activities.<br>
-                                            <a href="https://lvlyslv20.github.io/index.html" class="visit">Visit</a>
+                                        <p>My portfolio.<br><br>
+                                            <a href="https://lvlyslv20.github.io/index.html" class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -440,12 +603,12 @@
                                     <div class="section-block">
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Amiibo APi </h4>
-                                            <span class="about-tag ms-2">Activity 4</span>
+                                            <span class="about-tag ms-2 mb-2">(Activity 4)</span>
                                         </div>
                                         <p>List type of amiibo api.
-                                            <br>
+                                            <br><br>
                                             <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/ACT04/index.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -458,11 +621,11 @@
                                     <div class="section-block">
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Video Embedded </h4>
-                                            <span class="about-tag ms-2"> Mid-Part 1</span>
+                                            <span class="about-tag ms-2 mb-2"> (Mid-Part 1)</span>
                                         </div>
-                                        <p>All about Minions. <br>
+                                        <p>All about Minions. <br><br>
                                             <a href="https://lvlyslv20.github.io/ACTIVITY_SAM/MID01/index.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -475,10 +638,10 @@
                                     <div class="section-block">
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">404 Page </h4>
-                                            <span class="about-tag ms-2"> Mid-Part 3</span>
+                                            <span class="about-tag ms-2 mb-2"> (Mid-Part 3)</span>
                                         </div>
-                                        <p>All about Minions. <br>
-                                            <a href="https://lvlyslv20.github.io/404.html" class="visit">Visit</a>
+                                        <p>All about Minions. <br><br>
+                                            <a href="https://lvlyslv20.github.io/404.html" class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -498,9 +661,9 @@
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">404 Page</h4>
                                         </div>
-                                        <p>We designed a 404 landing page.<br>
+                                        <p>We designed a 404 landing page.<br><br>
                                             <a href="https://lvlyslv20.github.io/3-1/404/index.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -515,9 +678,9 @@
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">API</h4>
                                         </div>
-                                        <p>An API of heroes and villains.<br>
+                                        <p>An API of heroes and villains.<br><br>
                                             <a href="https://lvlyslv20.github.io/3-1/api/index.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
@@ -532,9 +695,9 @@
                                         <div class="d-flex align-items-center my-0">
                                             <h4 class="name">Aquaflask </h4>
                                         </div>
-                                        <p>Designed an aquaflask website. <br>
+                                        <p>Designed an aquaflask website. <br><br>
                                             <a href="https://lvlyslv20.github.io/3-1/Aquaflask/aquaflask.html"
-                                                class="visit">Visit</a>
+                                                class="visit">View</a>
                                         </p>
                                     </div>
                                 </div>
